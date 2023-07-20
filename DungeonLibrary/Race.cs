@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace DungeonLibrary
 {
-    public enum PlayerRace
+    public enum Race
     {
-        Human,
+        Human = 1,
         Nautolan,
         Mustafarian,
         Wookie,
-        Zabrak
-
-    }//end class
-}//end namespace
-
+        Zabrak,
+        Cyborg
+    }
+}

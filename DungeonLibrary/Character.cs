@@ -1,6 +1,6 @@
 ﻿namespace DungeonLibrary
 {
-    public class Character
+    public abstract class Character
     {
         private string _name;
         private int _hitChance;
@@ -62,10 +62,10 @@
         }
 
         //In combat, the attacker's HitChance minus the defender's Block will determine whether the attack hits.        
-        public int CalcBlock() { return Block; }
-        public int CalcHitChance() { return HitChance; }
+        public virtual int CalcBlock() { return Block; }
+        public virtual int CalcHitChance() { return HitChance; }
         //If an attacker lands a hit, we will call the attacker's CalcDamage() to determine how much damage to do.
-        public int CalcDamage() { return 0; }
+        public abstract int CalcDamage(); 
 
         public override string ToString()
         {
